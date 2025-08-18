@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n-key="pageTitle">Neural Coding Is Not Always Semantic</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/Q.ico" type="image/x-icon" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+window.MathJax = {
+  tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+  svg: { fontCache: 'global' }
+};
+</script>
+<script id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="translations.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="top-controls">
+        <button id="bibtex-modal-trigger" class="control-btn" aria-label="Cite this paper">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 2v12c0 1.25.75 2 2 2z"></path>
+                <path d="M14 21c3 0 7-1 7-8V5c0-1.25-.75-2.017-2-2h-4c-1.25 0-2 .75-2 2v12c0 1.25.75 2 2 2z"></path>
+            </svg>
+            <span class="tooltip" data-i18n-key="tooltip_cite">Cite this paper</span>
+        </button>
+        <button id="lang-toggle" class="control-btn" aria-label="Language">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span class="tooltip" data-i18n-key="tooltip_lang">Language</span>
+        </button>
+    </div>
+
+    <div class="side-nav">
+        <a href="#tldr" class="nav-dot" data-section="tldr"><span class="tooltip" data-i18n-key="nav_tldr">TL;DR</span></a>
+        <a href="#abstract" class="nav-dot" data-section="abstract"><span class="tooltip" data-i18n-key="nav_abstract">Abstract</span></a>
+        <a href="#overview" class="nav-dot" data-section="overview"><span class="tooltip" data-i18n-key="nav_overview">Motivation</span></a>
+        <a href="#methodology" class="nav-dot" data-section="methodology"><span class="tooltip" data-i18n-key="nav_methodology">Methodology</span></a>
+        <a href="#framework" class="nav-dot" data-section="framework"><span class="tooltip" data-i18n-key="nav_framework">Framework</span></a>
+        <a href="#case-study" class="nav-dot" data-section="case-study"><span class="tooltip" data-i18n-key="nav_case_study">Case Study</span></a>
+        <a href="#conclusion" class="nav-dot" data-section="conclusion"><span class="tooltip" data-i18n-key="nav_conclusion">Conclusion</span></a>
+    </div>
+
+    <div class="container">
+        <header class="header fade-in-section">
+            <h1 data-i18n-key="paperTitle">
+                Neural Coding Is Not Always Semantic: Towards the Standardized Coding Workflow in Semantic Communications
+            </h1>
+            
+            <div class="authors">
+                <div class="author"><a href="https://scholar.google.com/citations?user=N33wbdEAAAAJ" data-i18n-key="author_1" target="_blank">Hai-Long Qin<sup>1</sup></a></div>
+                <div class="author"><a href="https://scholar.google.com/citations?user=0I_YtFsAAAAJ" data-i18n-key="author_2" target="_blank">Jincheng Dai<sup>1,†</sup></a></div>
+                <div class="author"><a href="https://scholar.google.com/citations?user=f9s8H6UAAAAJ" data-i18n-key="author_3" target="_blank">Sixian Wang<sup>1</sup></a></div>
+                <div class="author"><a href="https://scholar.google.com/citations?user=mrEeosAAAAAJ" data-i18n-key="author_4" target="_blank">Xiaoqi Qin<sup>1</sup></a></div>
+                <div class="author"><a href="https://ieeexplore.ieee.org/author/37086424888" data-i18n-key="author_5" target="_blank">Shuo Shao<sup>2</sup></a></div>
+                <div class="author"><a href="https://scholar.google.com/citations?user=Dm9tNxoAAAAJ" data-i18n-key="author_6" target="_blank">Kai Niu<sup>1</sup></a></div>
+                <div class="author"><a href="https://scholar.google.com/citations?user=NC-ZeKAAAAAJ" data-i18n-key="author_7" target="_blank">Wenjun Xu<sup>1</sup></a></div>
+                <div class="author"><a href="https://scholar.google.com/citations?user=LMbrweUAAAAJ" data-i18n-key="author_8" target="_blank">Ping Zhang<sup>1,†</sup></a></div>
+            </div>
+            
+            <div class="affiliations">
+                <span class="affiliation" data-i18n-key="affiliation1"><sup>1</sup>Beijing University of Posts and Telecommunications</span>
+                <span class="affiliation" data-i18n-key="affiliation2"><sup>2</sup>University of Shanghai for Science and Technology</span>
+                <span class="affiliation" data-i18n-key="affiliation_corr"><sup>†</sup>Corresponding Authors</span>
+            </div>
+            
+            <div class="venue" data-i18n-key="venueInfo">
+                Accepted by IEEE Communications Standards Magazine (COMSTD), 2025
+            </div>
+            
+            <div class="action-buttons">
+                <a href="https://arxiv.org/abs/2505.18637" class="btn" target="_blank">
+                    <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                    <span>arXiv</span>
+                </a>
+                <a href="#" class="btn">
+                    <svg fill="currentColor" viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+                    <span data-i18n-key="btn_paper">Paper</span>
+                </a>
+            </div>
+        </header>
+
+        <section id="tldr" class="section tldr fade-in-section">
+            <div class="tldr-title" data-i18n-key="nav_tldr">TL;DR</div>
+            <div class="section-content">
+                <p data-i18n-key="tldr_content"></p>
+            </div>
+        </section>
+
+        <section id="abstract" class="section fade-in-section">
+            <h2 class="section-title" data-i18n-key="nav_abstract">Abstract</h2>
+            <div class="section-content abstract">
+                <p data-i18n-key="abstract_content"></p>
+            </div>
+        </section>
+        
+        <section id="overview" class="section fade-in-section">
+            <h2 class="section-title" data-i18n-key="nav_overview">Motivation</h2>
+            <div class="section-content motivation" data-i18n-key="motivation"></div>
+        </section>
+
+        <section id="methodology" class="section fade-in-section">
+            <h2 class="section-title" data-i18n-key="nav_methodology">Methodology</h2>
+            <div class="section-content methodology">
+                <p data-i18n-key="methodology_p1"></p>
+                <figure class="methodology-figure">
+                    <img src="images/overview.svg">
+                    <figcaption data-i18n-key="fig1"></figcaption>
+                </figure>
+                <p data-i18n-key="methodology_p2"></p>
+                <figure class="methodology-figure">
+                    <img src="images/bg.svg">
+                    <figcaption data-i18n-key="fig2"></figcaption>
+                </figure>
+                <p data-i18n-key="methodology_p3"></p>
+                <figure class="methodology-figure">
+                    <img src="images/semcod.svg">
+                    <figcaption data-i18n-key="fig3"></figcaption>
+                </figure>
+                <p data-i18n-key="methodology_p4"></p>
+            </div>
+        </section>
+        
+        <section id="framework" class="section fade-in-section">
+            <h2 class="section-title" data-i18n-key="nav_framework">Framework</h2>
+            <div class="section-content framework">
+                <p data-i18n-key="framework_p1"></p>
+                <figure class="methodology-figure">
+                    <img src="images/architecture.svg">
+                    <figcaption data-i18n-key="fig4"></figcaption>
+                </figure>
+                <p data-i18n-key="framework_p2"></p>
+            </div>
+        </section>
+        
+        <section id="case-study" class="section fade-in-section">
+            <h2 class="section-title" data-i18n-key="nav_case_study">Case Study</h2>
+            <div class="section-content case">
+                <p data-i18n-key="case_p1"></p>
+                <figure class="methodology-figure">
+                    <img src="images/result.svg">
+                    <figcaption data-i18n-key="fig5"></figcaption>
+                </figure>
+                <p data-i18n-key="case_p2"></p>
+            </div>
+        </section>
+        
+        <section id="conclusion" class="section fade-in-section">
+            <h2 class="section-title" data-i18n-key="nav_conclusion">Conclusion</h2>
+            <div class="section-content conclusion" data-i18n-key="conclusion"></div>
+        </section>
+
+        <footer class="footer fade-in-section">
+            <p data-i18n-key="footer_text">
+               &copy; 2025 Hai-Long Qin. All rights reserved. | Last updated: August 2025
+            </p>
+        </footer>
+    </div>
+    
+    <div id="bibtex-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" data-i18n-key="bib_title">BibTeX Citation</h3>
+                <button class="modal-close" id="modal-close-btn">&times;</button>
+            </div>
+            <textarea id="bibtex-code" readonly>@article{qin2025semcod,
+  title={Neural Coding Is Not Always Semantic: Toward the Standardized Coding Workflow in Semantic Communications},
+  author={Qin, Hai-Long and Dai, Jincheng and Wang, Sixian and Qin, Xiaoqi and Shao, Shuo and Niu, Kai and Xu, Wenjun and Zhang, Ping},
+  journal={IEEE Communications Standards Magazine},
+  year={2025}
+}</textarea>
+            <div class="modal-actions">
+                <button id="copy-bibtex-btn" data-i18n-key="bib_copy">Copy to Clipboard</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
