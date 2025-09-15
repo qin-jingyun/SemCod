@@ -4,7 +4,7 @@
 ### *Toward the Standardized Coding Workflow in Semantic Communications*
 
 [![arXiv](https://img.shields.io/badge/arXiv-2505.18637-b31b1b.svg)](https://arxiv.org/pdf/2505.18637) 
-[![IEEE](https://img.shields.io/badge/IEEE-COMSTD%202025-blue.svg)](https://ieeexplore.ieee.org) 
+[![IEEE](https://img.shields.io/badge/IEEE-COMSTD%202025-blue.svg)](https://ieeexplore.ieee.org/document/11145020) 
 [![Project Page](https://img.shields.io/badge/Project-Page-green.svg)](https://qin-jingyun.github.io/SemCod) 
 [![Email](https://img.shields.io/badge/Contact-Email-red.svg)](mailto:hailong.qin@bupt.edu.cn)
 
