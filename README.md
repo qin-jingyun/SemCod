@@ -9,7 +9,7 @@
 [![Email](https://img.shields.io/badge/Contact-Email-red.svg)](mailto:hailong.qin@bupt.edu.cn)
 
 [Hai-Long Qin](https://scholar.google.com/citations?user=N33wbdEAAAAJ)¹, [Jincheng Dai](https://scholar.google.com/citations?user=0I_YtFsAAAAJ)¹†, [Sixian Wang](https://scholar.google.com/citations?user=f9s8H6UAAAAJ)¹, [Xiaoqi Qin](https://scholar.google.com/citations?user=mrEeosAAAAAJ)¹,  
-[Shuo Shao](https://ieeexplore.ieee.org/author/37086424888)², [Kai Niu](https://scholar.google.com/citations?user=Dm9tNxoAAAAJ)¹, [Wenjun Xu](https://scholar.google.com/citations?user=NC-ZeKAAAAAJ)¹, [Ping Zhang](https://scholar.google.com/citations?user=LMbrweUAAAAJ)¹†
+[Shuo Shao](https://ieeexplore.ieee.org/author/37086424888)², [Kai Niu](https://scholar.google.com/citations?user=Dm9tNxoAAAAJ)¹, [Wenjun Xu](https://scholar.google.com/citations?user=NC-ZeKAAAAAJ)¹, [Ping Zhang](https://ieeexplore.ieee.org/author/37274503400)¹†
 
 ¹ Beijing University of Posts and Telecommunications (BUPT)  
 ² University of Shanghai for Science and Technology (USST)  
