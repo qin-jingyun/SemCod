@@ -44,8 +44,11 @@ If you find this work useful, please cite:
 
 ```bibtex
 @article{qin2025semcod,
-  title={Neural Coding Is Not Always Semantic: Toward the Standardized Coding Workflow in Semantic Communications},
-  author={Qin, Hai-Long and Dai, Jincheng and Wang, Sixian and Qin, Xiaoqi and Shao, Shuo and Niu, Kai and Xu, Wenjun and Zhang, Ping},
-  journal={IEEE Communications Standards Magazine},
-  year={2025}
+  author  = {H. L. Qin and J. Dai and S. Wang and X. Qin and S. Shao and K. Niu and W. Xu and P. Zhang},
+  title   = {Neural Coding Is Not Always Semantic: Toward the Standardized Coding Workflow in Semantic Communications},
+  journal = {IEEE Commun. Stand. Mag.},
+  volume  = {9},
+  number  = {4},
+  pages   = {24--33},
+  year    = {2025}
 }
